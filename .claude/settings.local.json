@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(if exist \"C:\\\\Users\\\\Arkajyoti\\\\Downloads\\\\PosModeTest\\\\app\\\\somc-1.0.keystore\" del \"C:\\\\Users\\\\Arkajyoti\\\\Downloads\\\\PosModeTest\\\\app\\\\somc-1.0.keystore\")",
+      "Bash(java -version:*)",
+      "Bash(where:*)",
+      "Bash(./gradlew tasks:*)",
+      "Bash(find:*)"
+    ]
+  }
+}

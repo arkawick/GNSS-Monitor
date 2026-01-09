@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.gnssmonitor'
+    compileSdk 34
+
+    defaultConfig {
+        // Uniquely identifies the package for publishing.
+        applicationId namespace
+        minSdkVersion 31
+        targetSdkVersion 34
+        versionCode appVersionCode
+        versionName appVersionName
+        base {
+            archivesName = "${rootProject.name}_v$versionName"
+        }
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-debug'
+            debuggable true
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+
+    lint {
+        abortOnError false
+        checkAllWarnings true
+        warningsAsErrors true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+}
+
+// Removed Java toolchain to use Android Studio's bundled JDK automatically
+
+dependencies {
+    implementation 'androidx.annotation:annotation:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.8.2'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.8.2'
+    implementation 'com.google.android.material:material:1.12.0'
+
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.5.1'
+}
+
+// Task to save generated all apks at Project Root
+tasks.register('saveApks') {
+    android.testVariants.configureEach { variant ->
+        dependsOn variant.getAssembleProvider()
+        doFirst {
+            delete fileTree(rootDir).matching {
+                include '*.apk'
+            }
+        }
+        doLast {
+            def mainOutput = variant.outputs.find { (it.outputType == 'MAIN') }
+            copy {
+                from mainOutput.outputFile
+                into rootDir
+            }
+        }
+    }
+    android.applicationVariants.configureEach { variant ->
+        dependsOn variant.getAssembleProvider()
+        doFirst {
+            delete fileTree(rootDir).matching {
+                include '*.apk'
+            }
+        }
+        doLast {
+            def mainOutput = variant.outputs.find { (it.outputType == 'MAIN') }
+            copy {
+                from mainOutput.outputFile
+                rename('-release', '')
+                into rootDir
+            }
+        }
+    }
+}
+
