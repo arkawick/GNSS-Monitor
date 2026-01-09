@@ -1,4 +1,4 @@
-package pos.modetest.tests;
+package com.gnssmonitor.tests;
 
 import android.location.Criteria;
 import android.location.Location;
@@ -23,10 +23,10 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.concurrent.Executors;
 
-import pos.modetest.captures.*;
+import com.gnssmonitor.captures.*;
 
-import static pos.modetest.util.Helpers.*;
-import static pos.modetest.util.HiddenMethods.*;
+import static com.gnssmonitor.util.Helpers.*;
+import static com.gnssmonitor.util.HiddenMethods.*;
 
 @RunWith(Enclosed.class)
 public class RequestLocationUpdatesTest {

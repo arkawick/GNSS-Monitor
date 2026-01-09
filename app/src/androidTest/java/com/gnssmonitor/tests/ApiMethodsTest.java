@@ -1,4 +1,4 @@
-package pos.modetest.tests;
+package com.gnssmonitor.tests;
 
 import android.location.LocationManager;
 import android.util.Log;
@@ -13,8 +13,8 @@ import static org.junit.Assume.*;
 
 import java.lang.reflect.Method;
 
-import static pos.modetest.util.Helpers.*;
-import static pos.modetest.util.HiddenMethods.*;
+import static com.gnssmonitor.util.Helpers.*;
+import static com.gnssmonitor.util.HiddenMethods.*;
 
 @RunWith(AndroidJUnit4.class)
 public class ApiMethodsTest {

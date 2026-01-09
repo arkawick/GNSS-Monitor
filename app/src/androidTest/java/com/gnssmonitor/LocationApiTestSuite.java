@@ -1,13 +1,13 @@
-package pos.modetest;
+package com.gnssmonitor;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
-import pos.modetest.tests.*;
+import com.gnssmonitor.tests.*;
 
-import static pos.modetest.util.Helpers.*;
+import static com.gnssmonitor.util.Helpers.*;
 
 /**
  * Test Suite encompassing all tests for Location API calls

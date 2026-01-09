@@ -6,7 +6,7 @@
  * CHANGES:
  *      - Replace Package
  */
-package pos.modetest.captures;
+package com.gnssmonitor.captures;
 
 /*
  * Copyright (C) 2019 The Android Open Source Project

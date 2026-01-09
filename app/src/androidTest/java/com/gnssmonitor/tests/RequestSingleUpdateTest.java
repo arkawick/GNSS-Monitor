@@ -1,4 +1,4 @@
-package pos.modetest.tests;
+package com.gnssmonitor.tests;
 
 import android.location.Criteria;
 import android.location.Location;
@@ -18,9 +18,9 @@ import static org.junit.Assert.*;
 import java.util.Arrays;
 import java.util.Collection;
 
-import pos.modetest.captures.*;
+import com.gnssmonitor.captures.*;
 
-import static pos.modetest.util.Helpers.*;
+import static com.gnssmonitor.util.Helpers.*;
 
 @RunWith(Enclosed.class)
 public class RequestSingleUpdateTest {

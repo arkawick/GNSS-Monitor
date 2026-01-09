@@ -1,4 +1,4 @@
-package pos.modetest.util;
+package com.gnssmonitor.util;
 
 import android.Manifest.permission;
 import android.app.UiAutomation;
@@ -8,7 +8,7 @@ import android.location.LocationRequest;
 
 import androidx.test.platform.app.InstrumentationRegistry;
 
-import static pos.modetest.util.HiddenMethods.*;
+import static com.gnssmonitor.util.HiddenMethods.*;
 
 public class Helpers {
     public static final long DEFAULT_LOC_INTERVAL_MS = 0;

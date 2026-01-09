@@ -1,4 +1,4 @@
-package pos.modetest.util;
+package com.gnssmonitor.util;
 
 import android.app.PendingIntent;
 import android.location.Location;

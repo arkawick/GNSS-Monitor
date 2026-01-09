@@ -7,7 +7,7 @@
  *      - Replace Package
  *      - Use androidx.annotation.Nullable instead of android.annotation.Nullable
  */
-package pos.modetest.captures;
+package com.gnssmonitor.captures;
 
 import android.location.Location;
 import android.os.CancellationSignal;

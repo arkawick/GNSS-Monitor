@@ -7,7 +7,7 @@
  *      - Replace Package
  *      - Use RECEIVER_EXPORTED instead of RECEIVER_EXPORTED_UNAUDITED
  */
-package pos.modetest.captures;
+package com.gnssmonitor.captures;
 
 /*
  * Copyright (C) 2019 The Android Open Source Project

@@ -7,7 +7,7 @@
  *      - Replace Package
  *      - Use androidx.test.espresso.intent.Checks instead of com.google.common.base.Preconditions
  */
-package pos.modetest.captures;
+package com.gnssmonitor.captures;
 
 /*
  * Copyright (C) 2019 The Android Open Source Project

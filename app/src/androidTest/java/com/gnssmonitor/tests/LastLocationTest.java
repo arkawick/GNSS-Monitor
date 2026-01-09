@@ -1,4 +1,4 @@
-package pos.modetest.tests;
+package com.gnssmonitor.tests;
 
 import android.location.Location;
 import android.location.LocationManager;
@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-import static pos.modetest.util.Helpers.*;
-import static pos.modetest.util.HiddenMethods.*;
+import static com.gnssmonitor.util.Helpers.*;
+import static com.gnssmonitor.util.HiddenMethods.*;
 
 @RunWith(AndroidJUnit4.class)
 public class LastLocationTest {
